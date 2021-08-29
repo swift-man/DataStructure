@@ -32,7 +32,7 @@
 		E55C1D4D26D9EDD200FBE5CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55C1D5226D9EDD300FBE5CD /* DataStructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55C1D5926D9EDD300FBE5CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E55C1D8926DB12AD00FBE5CD /* LinkedListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		E55C1D8926DB12AD00FBE5CD /* LinkedListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; tabWidth = 2; };
 		E55C1D8B26DB12B500FBE5CD /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E55C1D8D26DB12BA00FBE5CD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,9 @@
 				E55C1D5626D9EDD300FBE5CD /* DataStructureTests */,
 				E55C1D4A26D9EDD200FBE5CD /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		E55C1D4A26D9EDD200FBE5CD /* Products */ = {
 			isa = PBXGroup;

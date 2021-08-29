@@ -59,7 +59,6 @@ class LinkedListTests: QuickSpec {
         }
         
         it("header 는 4 next 는 2, 3, 5") {
-          print(linkedList.debugDescription)
           expect(linkedList.head?.value).to(equal(4))
           expect(linkedList.head?.next?.value).to(equal(2))
           expect(linkedList.head?.next?.next?.value).to(equal(3))
@@ -87,7 +86,36 @@ class LinkedListTests: QuickSpec {
         }
       }
       
-      // 삭제 테스트
+      context("삭제 테스트") {
+        beforeEach() {
+          linkedList = LinkedList(0)
+          linkedList.head?.next = Node(value: 2)
+          let next = linkedList.head?.next
+          next?.next = Node(value: 4)
+          next?.next?.next = Node(value: 5)
+        }
+        
+        it("2 삭제") {
+          expect(linkedList!.debugDescription).to(equal("[0, 2, 4, 5]"))
+          linkedList.remove(at: 1)
+          expect(linkedList!.debugDescription).to(equal("[4, 5]"))
+        }
+      }
+      
+      context("삭제 테스트2") {
+        beforeEach() {
+          linkedList = LinkedList(arrayLiteral: 0, 2, 3, 4)
+        }
+        
+        it("4 삭제") {
+          expect(linkedList!.debugDescription).to(equal("[0, 2, 3, 4]"))
+          linkedList.remove(node: linkedList.head!.next!)
+          expect(linkedList!.debugDescription).to(equal("[0, 3, 4]"))
+          
+          linkedList.delete(node: linkedList.head!.next!)
+          expect(linkedList!.debugDescription).to(equal("[0, 4]"))
+        }
+      }
     }
   }
 }

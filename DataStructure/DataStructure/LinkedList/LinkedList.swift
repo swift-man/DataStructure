@@ -54,7 +54,7 @@ public final class LinkedList<T> {
   ///
   /// - Parameter index: Integer value of the requested value's index
   public subscript(index: Int) -> T? {
-    let node = try? self.node(at: index)
+    let node = self.node(at: index)
     return node?.value
   }
   
@@ -62,7 +62,7 @@ public final class LinkedList<T> {
   ///
   /// - Parameter index: Integer value of the node's index to be returned
   /// - Returns: LinkedListNode
-  public func node(at index: Int) throws -> Node<T>? {
+  public func node(at index: Int) -> Node<T>? {
     guard let head = head else { return nil }
     guard index >= 0 else { return nil }
     
@@ -134,7 +134,7 @@ public final class LinkedList<T> {
       newNode.next = head
       head?.previous = newNode
       head = newNode
-    } else if let prev = try? node(at: index - 1) {
+    } else if let prev = node(at: index - 1) {
       let next = prev.next
       newNode.previous = prev
       newNode.next = next
@@ -154,7 +154,7 @@ public final class LinkedList<T> {
     if index == 0 {
       list.last?.next = head
       head = list.head
-    } else if let prev = try? node(at: index - 1) {
+    } else if let prev = node(at: index - 1) {
       let next = prev.next
       
       prev.next = list.head
@@ -222,8 +222,30 @@ public final class LinkedList<T> {
   /// - Returns: The data value contained in the deleted node
   @discardableResult
   public func remove(at index: Int) -> T? {
-    guard let node = try? self.node(at: index) else { return nil }
+    guard let node = self.node(at: index) else { return nil }
     return remove(node: node)
+  }
+  
+  @discardableResult
+  public func delete(node: Node<T>) -> Bool {
+    guard let head = head else { return false }
+    
+    if head === node {
+      self.head = node.next
+      return true
+    }
+    
+    var next: Node? = head
+    while next != nil {
+      if next?.next === node {
+        next?.next = node.next
+        return true
+      }
+      
+      next = next?.next
+    }
+    
+    return false
   }
 }
 
