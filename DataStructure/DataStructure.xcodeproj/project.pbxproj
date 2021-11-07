@@ -14,6 +14,8 @@
 		E55C1D8E26DB12BA00FBE5CD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C1D8D26DB12BA00FBE5CD /* LinkedList.swift */; };
 		E55C1D9126DB12E500FBE5CD /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = E55C1D9026DB12E500FBE5CD /* Nimble */; };
 		E55C1D9426DB130200FBE5CD /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = E55C1D9326DB130200FBE5CD /* Quick */; };
+		E562218127278EC3007EC9DA /* HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562218027278EC3007EC9DA /* HashTable.swift */; };
+		E562218327278ECC007EC9DA /* HashTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562218227278ECC007EC9DA /* HashTableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		E55C1D8926DB12AD00FBE5CD /* LinkedListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; tabWidth = 2; };
 		E55C1D8B26DB12B500FBE5CD /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E55C1D8D26DB12BA00FBE5CD /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		E562218027278EC3007EC9DA /* HashTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTable.swift; sourceTree = "<group>"; };
+		E562218227278ECC007EC9DA /* HashTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				E55C1D4C26D9EDD200FBE5CD /* DataStructure.h */,
 				E55C1D8B26DB12B500FBE5CD /* Node.swift */,
 				E55C1D6526DA077C00FBE5CD /* LinkedList */,
+				E562217F27278EB5007EC9DA /* HashTable */,
 				E55C1D4D26D9EDD200FBE5CD /* Info.plist */,
 			);
 			path = DataStructure;
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E55C1D8926DB12AD00FBE5CD /* LinkedListTests.swift */,
+				E562218227278ECC007EC9DA /* HashTableTests.swift */,
 				E55C1D5926D9EDD300FBE5CD /* Info.plist */,
 			);
 			path = DataStructureTests;
@@ -104,6 +110,14 @@
 				E55C1D8D26DB12BA00FBE5CD /* LinkedList.swift */,
 			);
 			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		E562217F27278EB5007EC9DA /* HashTable */ = {
+			isa = PBXGroup;
+			children = (
+				E562218027278EC3007EC9DA /* HashTable.swift */,
+			);
+			path = HashTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E55C1D8E26DB12BA00FBE5CD /* LinkedList.swift in Sources */,
+				E562218127278EC3007EC9DA /* HashTable.swift in Sources */,
 				E55C1D8C26DB12B500FBE5CD /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E562218327278ECC007EC9DA /* HashTableTests.swift in Sources */,
 				E55C1D8A26DB12AD00FBE5CD /* LinkedListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
